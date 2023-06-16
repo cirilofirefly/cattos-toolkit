@@ -2,9 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
+
+/* Fade */
 .fade-enter-active {
     animation: fade 1000ms;
 }
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+
+/* Wobble */
 
 .wobble-enter-active {
     animation: wobble 1000ms ease;
@@ -22,15 +36,6 @@
 
 .wobble-leave-active {
     transition: all 500ms ease;
-}
-
-@keyframes fade {
-    0% {
-        opacity: 0;
-    }
-    50% {
-        opacity: 1;
-    }
 }
 
 @keyframes wobble {
@@ -55,6 +60,64 @@
         transform: translateX(-4px);
     }
     100% {
+        transform: translateX(0px);
+    }
+}
+
+/* Slide Left */
+.slide-left-enter-active {
+    animation: slide-left-enter 2000ms;
+}
+
+.slide-left-leave-active {
+    animation: slide-left-enter 1000ms reverse;
+}
+
+@keyframes slide-left-enter {
+    0% {
+        opacity: 0;
+        transform: translateX(-5000px);
+    }
+    25% {
+        opacity: .25;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    75% {
+        opacity: 0.75;
+    } 
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }        
+}
+
+/* Slide Right */
+.slide-right-enter-active {
+    animation: slide-right-enter 2000ms;
+}
+
+.slide-right-leave-active {
+    animation: slide-right-enter 1000ms reverse;
+}
+
+@keyframes slide-right-enter {
+    0% {
+        opacity: 0;
+        transform: translateX(5000px);
+    }
+    25% {
+        opacity: .25;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    75% {
+        opacity: 0.75;
+    } 
+    100% {
+        opacity: 1;
         transform: translateX(0px);
     }
 }

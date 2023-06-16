@@ -2,8 +2,8 @@ export interface ILogin {
     email: string;
     password: string;
     errors: {
-        email: string,
-        password: string
+        email: string;
+        password: string;
     };
     processing: boolean;
 }

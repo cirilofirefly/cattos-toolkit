@@ -28,17 +28,24 @@ const router = createRouter({
             component: Home,
             meta: {
                 requiresAuth: true,
+                transition: 'slide-left'
             },
         },
         {
             path: '/register',
             name: 'register',
-            component: Register
+            component: Register,
+            meta: {
+                transition: 'slide-left'
+            },
         },
         {
             path: '/login',
             name: 'login',
-            component: Login
+            component: Login,
+            meta: {
+                transition: 'slide-left'
+            },
         }
     ]
 })

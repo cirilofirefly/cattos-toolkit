@@ -17,6 +17,7 @@
     "@fortawesome/free-solid-svg-icons": "^6.4.0",
     "@fortawesome/vue-fontawesome": "^3.0.0-5",
     "firebase": "^9.22.2",
+    "gsap": "^3.12.1",
     "vue": "^3.3.4",
     "vue-router": "^4.2.2",
     "vuefire": "^3.1.0"
